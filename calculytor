@@ -1,0 +1,42 @@
+  while True:
+    a = int(input("Ввеите число "))
+    b = int(input("Ввеите число "))
+    print("Выберите операцию")
+    print("1 - + (увеличение характеристики)")
+    print("2 - - (вычитание характеристик)")
+    print("3 - / (деление характеристик" \
+    ")")
+    print("4 - //")
+    print("5 - Расчёт урона после усиления")
+    print("6 - остаток ресурсов")
+    print("7 - остаток ресурсов")
+
+    operetion = int(input("Введите номер: "))
+    if operetion == 1:
+        result = a + b
+        print(a + b)
+    elif operetion == 2:
+        result = a - b 
+        print(a - b)    
+    elif operetion == 5:
+        result = a * b 
+        print(a * b)
+    elif operetion == 7:
+        result = a % b
+        print(a % b)
+    elif operetion == 6:
+        result = a ** b
+        print(a ** b)
+    elif operetion == 3:
+        result = a / b
+        print(a / b)
+    elif operetion == 4:
+        result = a // b 
+        print(a // b )
+    if result > 100:
+        print ("Высокое значение!!")
+    again = input("Все требования были сделаны, хотите продолжить ? (Да/Нет)")
+    if again != "Нет":
+        print("Россия, Путин, Победа")
+        print("Система перезагружаеться и делает расчет занаво <3")
+        continue
