@@ -1,0 +1,1 @@
+# galanevAI12-1curs
