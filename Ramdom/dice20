@@ -1,0 +1,31 @@
+import random 
+total_damage = 0 
+crit_count = 0
+
+print("Добро пожаловать в Dungeons & Dragons")
+while True:
+    dice1 = random.randint(1, 20)
+    dice2 = random.randint(1, 20)
+    total_damage += 1
+
+    print(f"Ход {total_damage}: выпало {dice1} и {dice2} (сумма {dice1 + dice2})")
+
+    if dice1 == dice2:
+        if dice1 == 20:
+            crit_count +1
+            print("Критический успех! Дракон повержен!")
+        elif dice1 == 1:
+            crit_count += 1 
+            print("Критический провал! Вы падаете в ловушку")
+        else:
+            damage = (dice1 + dice2) * 2
+            print(f"Обычный ход ! Итог: {damage}")
+    elif dice1 + dice2 == 40  or dice1 + dice2 == 3:
+        print("Легиндарный бросок!!!")
+    else:
+        damage = (dice1 + dice2) * 2
+        print(f"Обычный ход ! Итог: {damage}")
+        answer = input("Бросить еще ? (да/нет):  ")
+        if answer != "да":
+            break
+print(f"Игра окончена!! Всего бросили: {total_damage}, Критических событий: {crit_count}")
